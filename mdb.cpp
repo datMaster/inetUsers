@@ -10,14 +10,36 @@ mDB::~mDB()
 
 wfUser mDB::createUser()
 {
-
     return userok;
 }
 
-void mDB::createElement(const QString &fName, const QString &lName, const QString &mac1,
-                        const QString &mac2, const QString &mac3, const QString &mac4,
-                        const QString &mac5, const QString &icq, const QString &skype,
-                        const QString &room, const QString &tel)
+void mDB::listAllUsers(vector<wfUser> &uList)
+{
+    ifstream dbFile;
+    dbFile.open("dbusers.bs", ios_base::in |ios_base::binary);
+    if(!dbFile.is_open())
+    {
+        QMessageBox mbz;
+        mbz.setText("db !open.");
+        mbz.exec();
+    }
+    else
+    {
+        while(true)
+        {
+            wfUser wfU;
+            for(int i = 0; i < 32; ++ i)
+                wfU.fName[i] = 'x';
+            if(!dbFile.read((char *)&wfU, sizeof(wfUser)))
+                break;
+            else
+                uList.push_back(wfU);
+        }
+        dbFile.close();
+    }
+}
+
+void mDB::createElement(const wfUser &wUs)
 {
 //    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
 //    db.setHostName("localhost");
@@ -42,23 +64,8 @@ void mDB::createElement(const QString &fName, const QString &lName, const QStrin
         mbz.exec();
     }
     else
-    {
-        strcpy(userok.fName, (char*)fName.toStdString().c_str());
-        strcpy(userok.fName, (char*)fName.toStdString().c_str());
-        strcpy(userok.lName, (char*)lName.toStdString().c_str());
-        strcpy(userok.mac1, (char*)mac1.toStdString().c_str());
-        strcpy(userok.mac2, (char*)mac2.toStdString().c_str());
-        strcpy(userok.mac3, (char*)mac3.toStdString().c_str());
-        strcpy(userok.mac4, (char*)mac4.toStdString().c_str());
-        strcpy(userok.mac5, (char*)mac5.toStdString().c_str());
-        strcpy(userok.icq, (char*)icq.toStdString().c_str());
-        strcpy(userok.skype, (char*)skype.toStdString().c_str());
-        userok.room = room.toInt(0, 10);
-        strcpy(userok.tel, (char*)tel.toStdString().c_str());
-
-        cout << "userok : " << userok.fName << endl;
-
-        dbFile.write((char *)&userok, sizeof(wfUser));
+    {               
+        dbFile.write((char *)&wUs, sizeof(wfUser));
         dbFile.close();
     }
 

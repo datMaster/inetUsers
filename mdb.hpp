@@ -6,6 +6,8 @@
 #include <cstring>
 #include <iostream>
 #include <QMessageBox>
+#include <QDate>
+#include <vector>
 
 using namespace std;
 
@@ -13,7 +15,7 @@ struct wfUser
 {
 
     char fName[32],
-    lName[13],
+    lName[32],
     mac1[13],
     mac2[13],
     mac3[13],
@@ -22,6 +24,7 @@ struct wfUser
     icq[10],
     skype[32],
     tel[32];
+    QDate date;
     int room;
 };
 
@@ -34,10 +37,9 @@ class mDB
 
     wfUser userok;
 public:
+    void listAllUsers(vector<wfUser> &uList);
     void getElementByName(const QString &fName, const QString &lName, wfUser &wfU);
-    void createElement(const QString &fName, const QString &lName, const QString &mac1,
-                       const QString &mac2, const QString &mac3, const QString &mac4,
-                       const QString &mac5, const QString &icq, const QString &skype, const QString &room, const QString &tel);
+    void createElement(const wfUser &wUs);
     mDB();
     ~mDB();
 };

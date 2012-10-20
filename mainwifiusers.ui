@@ -2,24 +2,111 @@
 <ui version="4.0">
  <class>mainWifiUsers</class>
  <widget class="QMainWindow" name="mainWifiUsers">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
-    <height>465</height>
+    <width>854</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>mainWifiUsers</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableWidget" name="tableWidget_main">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>80</y>
+      <width>761</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>fName</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>lName</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Room</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Date</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Skype</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ICQ</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>MAC1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>MAC2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>MAC3</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>MAC4</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>MAC5</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>827</width>
+     <width>854</width>
      <height>23</height>
     </rect>
    </property>
@@ -36,6 +123,7 @@
     <addaction name="actionDEl"/>
     <addaction name="actionEdit"/>
     <addaction name="actionFind"/>
+    <addaction name="actionList_all"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -69,8 +157,16 @@
     <string>Find</string>
    </property>
   </action>
+  <action name="actionList_all">
+   <property name="text">
+    <string>List all</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
+ <slots>
+  <signal>rsz()</signal>
+ </slots>
 </ui>

@@ -20,3 +20,5 @@ HEADERS  += mainwifiusers.hpp \
 
 FORMS    += mainwifiusers.ui \
     adddialog.ui
+
+OTHER_FILES +=

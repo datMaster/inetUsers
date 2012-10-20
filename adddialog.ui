@@ -27,13 +27,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>MAC1:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_mac_1"/>
+       <widget class="QLineEdit" name="lineEdit_mac_1">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -41,13 +60,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QLabel" name="label_2">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>MAC2:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_mac_2"/>
+       <widget class="QLineEdit" name="lineEdit_mac_2">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -55,13 +93,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QLabel" name="label_4">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>MAC3:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_mac_3"/>
+       <widget class="QLineEdit" name="lineEdit_mac_3">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -69,13 +126,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
        <widget class="QLabel" name="label_5">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>MAC4:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_mac_4"/>
+       <widget class="QLineEdit" name="lineEdit_mac_4">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -83,13 +159,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
        <widget class="QLabel" name="label_6">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>MAC5:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_mac_5"/>
+       <widget class="QLineEdit" name="lineEdit_mac_5">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>12</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -132,13 +227,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>fName:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_fname"/>
+       <widget class="QLineEdit" name="lineEdit_fname">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>31</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -146,13 +260,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_7">
       <item>
        <widget class="QLabel" name="label_7">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>lName:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_lName"/>
+       <widget class="QLineEdit" name="lineEdit_lName">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>31</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -160,13 +293,23 @@
      <layout class="QHBoxLayout" name="horizontalLayout_9">
       <item>
        <widget class="QLabel" name="label_11">
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>Room:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_room"/>
+       <widget class="QSpinBox" name="spinBox_room">
+        <property name="maximum">
+         <number>10000</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -174,13 +317,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_11">
       <item>
        <widget class="QLabel" name="label_10">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>Tel:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_tel"/>
+       <widget class="QLineEdit" name="lineEdit_tel">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>31</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -188,13 +350,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_10">
       <item>
        <widget class="QLabel" name="label_9">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>Skype:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_skype"/>
+       <widget class="QLineEdit" name="lineEdit_skype">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>31</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -202,13 +383,32 @@
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
        <widget class="QLabel" name="label_8">
+        <property name="minimumSize">
+         <size>
+          <width>45</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>45</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="text">
          <string>ICQ:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_icq"/>
+       <widget class="QLineEdit" name="lineEdit_icq">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+        <property name="maxLength">
+         <number>9</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -230,14 +430,31 @@
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>260</y>
+     <x>300</x>
+     <y>240</y>
      <width>451</width>
-     <height>181</height>
+     <height>191</height>
     </rect>
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_fname</tabstop>
+  <tabstop>lineEdit_lName</tabstop>
+  <tabstop>spinBox_room</tabstop>
+  <tabstop>lineEdit_tel</tabstop>
+  <tabstop>lineEdit_skype</tabstop>
+  <tabstop>lineEdit_icq</tabstop>
+  <tabstop>lineEdit_mac_1</tabstop>
+  <tabstop>lineEdit_mac_2</tabstop>
+  <tabstop>lineEdit_mac_3</tabstop>
+  <tabstop>lineEdit_mac_4</tabstop>
+  <tabstop>lineEdit_mac_5</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>calendarWidget</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

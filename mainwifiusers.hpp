@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "adddialog.hpp"
+#include "mdb.hpp"
 
 namespace Ui {
 class mainWifiUsers;
@@ -17,7 +18,9 @@ public:
     ~mainWifiUsers();
     
 private slots:
-    void on_actionADD_triggered();
+    void on_actionADD_triggered();     
+    void on_actionList_all_triggered();
+    void clearTable();
 
 private:
     Ui::mainWifiUsers *ui;
