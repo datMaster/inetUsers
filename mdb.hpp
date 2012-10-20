@@ -3,39 +3,25 @@
 
 #include <QString>
 #include <fstream>
+#include <cstring>
+#include <iostream>
 #include <QMessageBox>
-#include <QSqlDatabase>
 
 using namespace std;
 
-class wfUser
+struct wfUser
 {
-public :
-    wfUser()
-    {
-        fName.clear();
-        lName.clear();
-        mac1.clear();
-        mac2.clear();
-        mac3.clear();
-        mac4.clear();
-        mac5.clear();
-        icq.clear();
-        skype.clear();
-        tel.clear();
-        room = 0;
-    }
 
-    QString fName,
-        lName,
-        mac1,
-        mac2,
-        mac3,
-        mac4,
-        mac5,
-        icq,
-        skype,
-        tel;
+    char fName[32],
+    lName[13],
+    mac1[13],
+    mac2[13],
+    mac3[13],
+    mac4[13],
+    mac5[13],
+    icq[10],
+    skype[32],
+    tel[32];
     int room;
 };
 
@@ -43,11 +29,12 @@ class mDB
 {    
     void addElement(wfUser);
     void delElement();
-    int serchElement(wfUser);
+    int serchElement(wfUser);        
     wfUser createUser();
 
     wfUser userok;
 public:
+    void getElementByName(const QString &fName, const QString &lName, wfUser &wfU);
     void createElement(const QString &fName, const QString &lName, const QString &mac1,
                        const QString &mac2, const QString &mac3, const QString &mac4,
                        const QString &mac5, const QString &icq, const QString &skype, const QString &room, const QString &tel);

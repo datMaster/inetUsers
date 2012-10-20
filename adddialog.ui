@@ -214,12 +214,29 @@
     </item>
    </layout>
   </widget>
-  <zorder>label_4</zorder>
-  <zorder>verticalLayoutWidget</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>calendarWidget</zorder>
-  <zorder>verticalLayoutWidget_2</zorder>
-  <zorder>label_9</zorder>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>200</y>
+     <width>89</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Get</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>260</y>
+     <width>451</width>
+     <height>181</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -4,8 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui\ sql
-
+QT       += core gui
 TARGET = wifi
 TEMPLATE = app
 
