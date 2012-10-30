@@ -12,11 +12,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwifiusers.cpp \
     adddialog.cpp \
-    mdb.cpp
+    mdb.cpp \
+    wfuser.cpp
 
 HEADERS  += mainwifiusers.hpp \
     adddialog.hpp \
-    mdb.hpp
+    mdb.hpp \
+    wfuser.hpp
 
 FORMS    += mainwifiusers.ui \
     adddialog.ui

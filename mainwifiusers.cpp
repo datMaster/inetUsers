@@ -39,18 +39,13 @@ void mainWifiUsers::on_actionList_all_triggered()
         QTableWidgetItem *item3 = new QTableWidgetItem(QString::number(wfUser(users[i]).room));
         ui->tableWidget_main->setItem(i, 2, item3);
 
-        if(wfUser(users[i]).date == QDate::currentDate())
-        {
-            QTableWidgetItem *item4 = new QTableWidgetItem(wfUser(users[i]).date.toString("dd.MM.yyyy"));
-            item4->setBackground(Qt::red);
-            ui->tableWidget_main->setItem(i, 3, item4);
-        }
-        else
-        {
-            QTableWidgetItem *item4 = new QTableWidgetItem(wfUser(users[i]).date.toString("dd.MM.yyyy"));
-            item4->setBackground(Qt::green);
-            ui->tableWidget_main->setItem(i, 3, item4);
-        }
+        QTableWidgetItem *item4 = new QTableWidgetItem(wfUser(users[i]).date.toString("dd.MM.yyyy"));
+        if(wfUser(users[i]).date <= QDate::currentDate())
+            item4->setBackground(Qt::red);                    
+        else                    
+            item4->setBackground(Qt::green);        
+
+        ui->tableWidget_main->setItem(i, 3, item4);
 
         QTableWidgetItem *item5 = new QTableWidgetItem(wfUser(users[i]).skype);
         ui->tableWidget_main->setItem(i, 4, item5);

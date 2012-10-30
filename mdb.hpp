@@ -6,36 +6,23 @@
 #include <cstring>
 #include <iostream>
 #include <QMessageBox>
-#include <QDate>
 #include <vector>
+
+#include "wfuser.hpp"
 
 using namespace std;
 
-struct wfUser
-{
-
-    char fName[32],
-    lName[32],
-    mac1[13],
-    mac2[13],
-    mac3[13],
-    mac4[13],
-    mac5[13],
-    icq[10],
-    skype[32],
-    tel[32];
-    QDate date;
-    int room;
-};
-
 class mDB
 {    
-    void addElement(wfUser);
+private :    
     void delElement();
-    int serchElement(wfUser);        
-    wfUser createUser();
-
-    wfUser userok;
+    int serchElement(const wfUser &sElement);
+    bool openDBreadOnly();
+    bool DBFileIsOpen();
+    bool openDBwrite();
+    bool openDB_w_app();
+    void printError(const char *mess);        
+    fstream dbFile;
 public:
     void listAllUsers(vector<wfUser> &uList);
     void getElementByName(const QString &fName, const QString &lName, wfUser &wfU);
